@@ -1,0 +1,14 @@
+﻿@using AntDesign
+
+
+
+<AntDesign.Menu Mode="MenuMode.Horizontal" Style="height:64px; float:right;">
+    @foreach (var render in ToolbarItemRenders)
+    {
+        <AntDesign.MenuItem Style="border-bottom:none; border-top:2px solid transparent; vertical-align:middle;">
+            @render
+        </AntDesign.MenuItem>
+    }
+</AntDesign.Menu>
+
+

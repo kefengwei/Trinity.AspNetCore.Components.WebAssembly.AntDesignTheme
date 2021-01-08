@@ -1,0 +1,10 @@
+﻿@using AntDesign
+@if (Menu != null)
+{
+    <AntDesign.Menu Style="" Theme="MenuTheme.Dark" Mode="MenuMode.Inline">
+        @foreach (var menuItem in Menu.Items)
+        {
+        <FirstLevelNavMenuItem MenuItem="menuItem" />
+        }
+    </AntDesign.Menu>
+}

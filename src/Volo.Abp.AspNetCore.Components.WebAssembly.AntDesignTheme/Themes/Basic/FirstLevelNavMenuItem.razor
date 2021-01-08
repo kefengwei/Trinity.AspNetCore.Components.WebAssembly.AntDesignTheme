@@ -1,0 +1,46 @@
+﻿@using Volo.Abp.UI.Navigation
+@using AntDesign
+@{
+    var elementId = MenuItem.ElementId ?? "MenuItem_" + MenuItem.Name.Replace(".", "_");
+    var cssClass = string.IsNullOrEmpty(MenuItem.CssClass) ? string.Empty : MenuItem.CssClass;
+    var disabled = MenuItem.IsDisabled ? "disabled" : string.Empty;
+    var url = MenuItem.Url == null ? "#" : MenuItem.Url.TrimStart('/');
+}
+
+@if (MenuItem.IsLeaf || MenuItem.Items.Count <= 0)
+{
+    if (MenuItem.Url != null)
+    {
+
+        <AntDesign.MenuItem Id="@elementId"
+                            Key="@elementId"
+                            Disabled="@MenuItem.IsDisabled"
+                            RouterLink="@url"
+                            RouterMatch="NavLinkMatch.All">
+            @if (MenuItem.Icon != null)
+            {
+                if (MenuItem.Icon.StartsWith("fa"))
+                {
+                    <i class="@MenuItem.Icon mr-1"></i>
+                }
+                <AntDesign.Icon Type="@MenuItem.Icon" Class="mr-1"></AntDesign.Icon>
+            }
+            @MenuItem.DisplayName
+        </AntDesign.MenuItem>
+
+    }
+}
+else
+{
+    <AntDesign.SubMenu Id="@elementId"
+                       Key="@elementId"
+                       Disabled="@MenuItem.IsDisabled"
+                       Title="@MenuItem.DisplayName">
+        @foreach (var childMenuItem in MenuItem.Items)
+        {
+            <SecondLevelNavMenuItem MenuItem="childMenuItem" />
+        }
+    </AntDesign.SubMenu>
+
+}
+

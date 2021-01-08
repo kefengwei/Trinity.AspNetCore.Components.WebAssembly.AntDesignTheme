@@ -1,0 +1,69 @@
+﻿@inherits LayoutComponentBase
+@using AntDesign
+@*<AntDesign.Layout>
+        <AntDesign.Header>
+            <Branding />
+            <AntDesign.Menu Theme="MenuTheme.Dark" Mode="MenuMode.Vertical">
+                <NavToolbar />
+            </AntDesign.Menu>
+        </AntDesign.Header>
+        <AntDesign.Layout>
+            <AntDesign.Sider Width="200">
+                <NavMenu />
+            </AntDesign.Sider>
+            <AntDesign.Layout>
+                <PageAlert />
+                @Body
+                <UiMessageAlert />
+                <UiNotificationAlert />
+            </AntDesign.Layout>
+        </AntDesign.Layout>
+    </AntDesign.Layout>
+    <AntContainer />*@
+
+
+
+<AntDesign.Layout Style="min-height:100vh;">
+    <AntDesign.Sider Collapsible="true"
+                     Collapsed="@IsCollapseShown"
+                     NoTrigger="true">
+        <Branding />
+        <AntDesign.Menu Theme="MenuTheme.Dark"
+                        Mode="MenuMode.Inline"
+                        Style="width:200px;">
+            <NavMenu />
+        </AntDesign.Menu>
+    </AntDesign.Sider>
+    <AntDesign.Layout Class="site-layout">
+        <Header Class="site-layout-background" Style="padding: 0;">
+            @*<div style="display:flex; justify-content:space-between; align-content:center">
+                <div>
+                    @if (IsCollapseShown)
+                    {
+                        <AntDesign.Icon Style="width:64px;height:64px;" Type="menu-unfold" Theme="outline" Class="trigger" OnClick="ToggleCollapse" />
+                    }
+                    else
+                    {
+                        <AntDesign.Icon Style="width:64px;height:64px;" Type="menu-fold" Theme="outline" Class="trigger" OnClick="ToggleCollapse" />
+                    }
+                </div>
+                <NavToolbar />
+            </div>*@
+            <NavToolbar />
+        </Header>
+        <Content Class="site-layout-background" Style="margin: 24px 16px;padding: 24px;min-height: 280px;">
+            @Body
+        </Content>
+    </AntDesign.Layout>
+</AntDesign.Layout>
+
+<style>
+    .site-layout .site-layout-background {
+        background: #fff;
+    }
+</style>
+
+
+
+
+
