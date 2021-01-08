@@ -1,4 +1,5 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+  <Import Project="..\..\common.props" />
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <PackageId>Volo.Abp.AspNetCore.Components.WebAssembly.AntDesignTheme</PackageId>
@@ -9,3 +10,4 @@
     <PackageReference Include="Volo.Abp.AspNetCore.Components.WebAssembly.Theming" Version="4.0.0" />
   </ItemGroup>
 </Project>
+ 
