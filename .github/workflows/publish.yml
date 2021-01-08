@@ -33,7 +33,7 @@ jobs:
       - name: remove unused packages
         run: |
           cd dest
-          del * -Exclude Volo.Abp.AspNetCore.Components.WebAssembly.*
+          del * -Exclude Trinity.AspNetCore.Components.WebAssembly.*
           del * -Exclude *.${{ steps.getVersion.outputs.first_match }}.nupkg
           dir -name
       - name: dotnet nuget push to NuGet
