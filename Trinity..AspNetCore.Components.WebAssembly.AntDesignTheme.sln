@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8725BA18-833C-4542-8654-915068562B3F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Volo.Abp.AspNetCore.Components.WebAssembly.AntDesignTheme", "src\Volo.Abp.AspNetCore.Components.WebAssembly.AntDesignTheme\Volo.Abp.AspNetCore.Components.WebAssembly.AntDesignTheme.csproj", "{EA194FC0-B950-4EB0-8670-04A0E67F2DAC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Trinity.AspNetCore.Components.WebAssembly.AntDesignTheme", "src\Volo.Abp.AspNetCore.Components.WebAssembly.AntDesignTheme\Trinity.AspNetCore.Components.WebAssembly.AntDesignTheme.csproj", "{EA194FC0-B950-4EB0-8670-04A0E67F2DAC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

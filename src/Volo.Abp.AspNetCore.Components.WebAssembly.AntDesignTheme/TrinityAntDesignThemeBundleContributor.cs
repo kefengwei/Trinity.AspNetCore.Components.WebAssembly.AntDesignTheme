@@ -1,8 +1,8 @@
 ﻿using Volo.Abp.Bundling;
 
-namespace Volo.Abp.AspNetCore.Components.WebAssembly.AntDesignTheme
+namespace Trinity.AspNetCore.Components.WebAssembly.AntDesignTheme
 {
-    public class AntDesignThemeBundleContributor : IBundleContributor
+    public class TrinityAntDesignThemeBundleContributor : IBundleContributor
     {
         public void AddScripts(BundleContext context)
         {

@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Components;
 using Volo.Abp.UI.Navigation;
 
-namespace Volo.Abp.AspNetCore.Components.WebAssembly.AntDesignTheme.Themes.Basic
+namespace Trinity.AspNetCore.Components.WebAssembly.AntDesignTheme.Themes.Basic
 {
     public partial class NavMenu
     {

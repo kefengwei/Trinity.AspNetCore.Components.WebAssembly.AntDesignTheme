@@ -2,15 +2,14 @@
 using Volo.Abp.AspNetCore.Components.WebAssembly.Theming.Routing;
 using Volo.Abp.AspNetCore.Components.WebAssembly.Theming.Toolbars;
 using Volo.Abp.Modularity;
-using AntDesign;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Volo.Abp.AspNetCore.Components.WebAssembly.AntDesignTheme
+namespace Trinity.AspNetCore.Components.WebAssembly.AntDesignTheme
 {
     [DependsOn(
         typeof(AbpAspNetCoreComponentsWebAssemblyThemingModule)
         )]
-    public class AbpAspNetCoreComponentsWebAssemblyAntDesignThemeModule : AbpModule
+    public class TrinityAspNetCoreComponentsWebAssemblyAntDesignThemeModule : AbpModule
     {
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
@@ -18,12 +17,12 @@ namespace Volo.Abp.AspNetCore.Components.WebAssembly.AntDesignTheme
             
             Configure<AbpRouterOptions>(options =>
             {
-                options.AdditionalAssemblies.Add(typeof(AbpAspNetCoreComponentsWebAssemblyAntDesignThemeModule).Assembly);
+                options.AdditionalAssemblies.Add(typeof(TrinityAspNetCoreComponentsWebAssemblyAntDesignThemeModule).Assembly);
             });
 
             Configure<AbpToolbarOptions>(options =>
             {
-                options.Contributors.Add(new AntDesignThemeToolbarContributor());
+                options.Contributors.Add(new TrinityAntDesignThemeToolbarContributor());
             });
         }
     }

@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Routing;
 using Volo.Abp.UI.Navigation;
 
-namespace Volo.Abp.AspNetCore.Components.WebAssembly.AntDesignTheme.Themes.Basic
+namespace Trinity.AspNetCore.Components.WebAssembly.AntDesignTheme.Themes.Basic
 {
     public partial class LoginDisplay : IDisposable
     {

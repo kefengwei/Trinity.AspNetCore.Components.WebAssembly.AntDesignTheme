@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Routing;
 
-namespace Volo.Abp.AspNetCore.Components.WebAssembly.AntDesignTheme.Themes.Basic
+namespace Trinity.AspNetCore.Components.WebAssembly.AntDesignTheme.Themes.Basic
 {
     public partial class MainLayout : IDisposable
     {

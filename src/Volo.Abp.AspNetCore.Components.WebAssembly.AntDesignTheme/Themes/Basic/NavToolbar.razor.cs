@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components;
 using Volo.Abp.AspNetCore.Components.WebAssembly.Theming.Toolbars;
 
-namespace Volo.Abp.AspNetCore.Components.WebAssembly.AntDesignTheme.Themes.Basic
+namespace Trinity.AspNetCore.Components.WebAssembly.AntDesignTheme.Themes.Basic
 {
     public partial class NavToolbar
     {

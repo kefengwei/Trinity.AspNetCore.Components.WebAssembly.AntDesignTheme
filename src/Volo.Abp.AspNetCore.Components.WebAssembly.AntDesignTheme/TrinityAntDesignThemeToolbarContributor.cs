@@ -1,10 +1,10 @@
 ﻿using System.Threading.Tasks;
-using Volo.Abp.AspNetCore.Components.WebAssembly.AntDesignTheme.Themes.Basic;
+using Trinity.AspNetCore.Components.WebAssembly.AntDesignTheme.Themes.Basic;
 using Volo.Abp.AspNetCore.Components.WebAssembly.Theming.Toolbars;
 
-namespace Volo.Abp.AspNetCore.Components.WebAssembly.AntDesignTheme
+namespace Trinity.AspNetCore.Components.WebAssembly.AntDesignTheme
 {
-    public class AntDesignThemeToolbarContributor : IToolbarContributor
+    public class TrinityAntDesignThemeToolbarContributor : IToolbarContributor
     {
         public Task ConfigureToolbarAsync(IToolbarConfigurationContext context)
         {
