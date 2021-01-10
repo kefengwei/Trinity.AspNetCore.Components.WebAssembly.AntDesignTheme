@@ -9,7 +9,7 @@
 {
     if (MenuItem.Url != null)
     {
-        <AntDesign.MenuItem 
+        <MenuItem 
                             Id="@elementId" 
                             Key="@elementId" 
                             Disabled="@MenuItem.IsDisabled" 
@@ -21,15 +21,15 @@
                 {
                     <i class="@MenuItem.Icon mr-1"></i>
                 }
-                <AntDesign.Icon Type="@MenuItem.Icon" Class="mr-1"></AntDesign.Icon>
+                <Icon Type="@MenuItem.Icon" Class="mr-1"></Icon>
             }
             @MenuItem.DisplayName
-        </AntDesign.MenuItem>
+        </MenuItem>
     }
 }
 else
 {
-    <AntDesign.SubMenu 
+    <SubMenu 
                        Id="@elementId" 
                        Key="@elementId" 
                        Disabled="@MenuItem.IsDisabled" 
@@ -38,7 +38,7 @@ else
         {
             <SecondLevelNavMenuItem MenuItem="childMenuItem" />
         }
-    </AntDesign.SubMenu>
+    </SubMenu>
 }
 @code {
 }

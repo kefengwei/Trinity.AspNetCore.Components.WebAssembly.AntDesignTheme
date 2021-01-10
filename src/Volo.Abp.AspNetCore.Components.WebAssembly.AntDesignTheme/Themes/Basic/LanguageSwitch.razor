@@ -1,12 +1,11 @@
 ﻿@using Volo.Abp.Localization
 @using System.Globalization
 @using System.Collections.Immutable
-@using AntDesign
 @inject ILanguageProvider LanguageProvider
 @inject IJSRuntime JsRuntime
 @if (_otherLanguages != null && _otherLanguages.Any())
 {
-    <AntDesign.Dropdown>
+    <Dropdown>
         <Overlay>
             <Menu>
                 @foreach (var language in _otherLanguages)
@@ -16,9 +15,9 @@
             </Menu>
         </Overlay>
         <ChildContent>
-            @_currentLanguage.DisplayName<AntDesign.Icon Type="down" />
+            @_currentLanguage.DisplayName<Icon Type="down" />
         </ChildContent>
-    </AntDesign.Dropdown>
+    </Dropdown>
 }
 @code {
     private IReadOnlyList<LanguageInfo> _otherLanguages;

@@ -1,7 +1,6 @@
 ﻿@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
 @using Volo.Abp.Users
 @using Volo.Abp.MultiTenancy
-@using AntDesign
 @inject ICurrentUser CurrentUser
 @inject ICurrentTenant CurrentTenant
 @inject IJSRuntime JsRuntime
@@ -9,18 +8,18 @@
 @inject SignOutSessionStateManager SignOutManager
 <AuthorizeView>
     <Authorized>
-        <AntDesign.Dropdown>
+        <Dropdown>
             <Overlay>
-                <AntDesign.Menu>
+                <Menu>
                     @if (Menu != null)
                     {
                         @foreach (var menuItem in Menu.Items)
                         {
-                            <AntDesign.MenuItem OnClick="@(() => NavigateToAsync(menuItem.Url, menuItem.Target))">@menuItem.DisplayName</AntDesign.MenuItem>
+                            <MenuItem OnClick="@(() => NavigateToAsync(menuItem.Url, menuItem.Target))">@menuItem.DisplayName</MenuItem>
                         }
                     }
-                    <AntDesign.MenuItem OnClick="BeginSignOut">Logout</AntDesign.MenuItem>
-                </AntDesign.Menu>
+                    <MenuItem OnClick="BeginSignOut">Logout</MenuItem>
+                </Menu>
             </Overlay>
             <ChildContent>
                 <a class="ant-dropdown-link" @onclick:preventDefault>
@@ -32,10 +31,10 @@
                     {
                         <span>@CurrentUser.UserName</span>
                     } 
-                    <AntDesign.Icon Type="down" />
+                    <Icon Type="down" />
                 </a>
             </ChildContent>
-        </AntDesign.Dropdown>
+        </Dropdown>
     </Authorized>
     <NotAuthorized>
         <a class="nav-link" href="authentication/login">Log in</a>
