@@ -7,6 +7,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8725BA18-833
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Trinity.AspNetCore.Components.WebAssembly.AntDesignTheme", "src\Volo.Abp.AspNetCore.Components.WebAssembly.AntDesignTheme\Trinity.AspNetCore.Components.WebAssembly.AntDesignTheme.csproj", "{EA194FC0-B950-4EB0-8670-04A0E67F2DAC}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{98F93E3F-8CE9-4973-85E0-23C5AD59D37C}"
+	ProjectSection(SolutionItems) = preProject
+		common.props = common.props
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
