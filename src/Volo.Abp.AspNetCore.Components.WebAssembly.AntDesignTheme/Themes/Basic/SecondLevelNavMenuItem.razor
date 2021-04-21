@@ -9,7 +9,7 @@
 {
     if (MenuItem.Url != null)
     {
-        <MenuItem 
+        <AntDesign.MenuItem 
                             Id="@elementId" 
                             Key="@elementId" 
                             Disabled="@MenuItem.IsDisabled" 
@@ -24,7 +24,7 @@
                 <Icon Type="@MenuItem.Icon" Class="mr-1"></Icon>
             }
             @MenuItem.DisplayName
-        </MenuItem>
+        </AntDesign.MenuItem>
     }
 }
 else

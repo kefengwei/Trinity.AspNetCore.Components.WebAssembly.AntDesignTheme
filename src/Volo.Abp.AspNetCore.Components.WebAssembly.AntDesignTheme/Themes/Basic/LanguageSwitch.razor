@@ -1,8 +1,8 @@
 ﻿@using Volo.Abp.Localization
 @using System.Globalization
 @using System.Collections.Immutable
-@inject ILanguageProvider LanguageProvider
-@inject IJSRuntime JsRuntime
+@inject ILanguageProvider _languageProvider
+@inject IJSRuntime _jsRuntime
 @if (_otherLanguages != null && _otherLanguages.Any())
 {
     <Dropdown>
@@ -10,7 +10,9 @@
             <Menu>
                 @foreach (var language in _otherLanguages)
                 {
-                    <MenuItem OnClick="() => ChangeLanguageAsync(language)">@language.DisplayName</MenuItem>
+                    <AntDesign.MenuItem OnClick="() => ChangeLanguageAsync(language)">
+                    @language.DisplayName
+                    </AntDesign.MenuItem>
                 }
             </Menu>
         </Overlay>
@@ -23,14 +25,14 @@
     private IReadOnlyList<LanguageInfo> _otherLanguages;
     private LanguageInfo _currentLanguage;
 
-    protected async override Task OnInitializedAsync()
+    protected override async Task OnInitializedAsync()
     {
-        var selectedLanguageName = await JsRuntime.InvokeAsync<string>(
+        var selectedLanguageName = await _jsRuntime.InvokeAsync<string>(
             "localStorage.getItem",
             "Abp.SelectedLanguage"
             );
 
-        _otherLanguages = await LanguageProvider.GetLanguagesAsync();
+        _otherLanguages = await _languageProvider.GetLanguagesAsync();
 
         if (!_otherLanguages.Any())
         {
@@ -57,11 +59,11 @@
 
     private async Task ChangeLanguageAsync(LanguageInfo language)
     {
-        await JsRuntime.InvokeVoidAsync(
+        await _jsRuntime.InvokeVoidAsync(
             "localStorage.setItem",
             "Abp.SelectedLanguage", language.UiCultureName
             );
 
-        await JsRuntime.InvokeVoidAsync("location.reload");
+        await _jsRuntime.InvokeVoidAsync("location.reload");
     }
 }

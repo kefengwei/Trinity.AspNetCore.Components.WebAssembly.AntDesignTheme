@@ -17,7 +17,7 @@ namespace Trinity.AspNetCore.Components.WebAssembly.AntDesignTheme.Themes.Basic
         {
             Menu = await MenuManager.GetAsync(StandardMenus.User);
 
-            Navigation.LocationChanged += OnLocationChanged;
+            _navigation.LocationChanged += OnLocationChanged;
         }
 
         protected virtual void OnLocationChanged(object sender, LocationChangedEventArgs e)
@@ -27,7 +27,7 @@ namespace Trinity.AspNetCore.Components.WebAssembly.AntDesignTheme.Themes.Basic
 
         public void Dispose()
         {
-            Navigation.LocationChanged -= OnLocationChanged;
+            _navigation.LocationChanged -= OnLocationChanged;
         }
     }
 }
