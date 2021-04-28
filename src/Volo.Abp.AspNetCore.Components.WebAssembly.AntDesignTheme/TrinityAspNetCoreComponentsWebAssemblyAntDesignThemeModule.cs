@@ -1,8 +1,8 @@
 ﻿using Volo.Abp.AspNetCore.Components.WebAssembly.Theming;
-using Volo.Abp.AspNetCore.Components.WebAssembly.Theming.Routing;
-using Volo.Abp.AspNetCore.Components.WebAssembly.Theming.Toolbars;
 using Volo.Abp.Modularity;
 using Microsoft.Extensions.DependencyInjection;
+using Volo.Abp.AspNetCore.Components.Web.Theming.Routing;
+using Volo.Abp.AspNetCore.Components.Web.Theming.Toolbars;
 
 namespace Trinity.AspNetCore.Components.WebAssembly.AntDesignTheme
 {

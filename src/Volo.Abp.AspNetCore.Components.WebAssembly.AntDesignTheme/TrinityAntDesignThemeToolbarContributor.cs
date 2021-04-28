@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 using Trinity.AspNetCore.Components.WebAssembly.AntDesignTheme.Themes.Basic;
-using Volo.Abp.AspNetCore.Components.WebAssembly.Theming.Toolbars;
+using Volo.Abp.AspNetCore.Components.Web.Theming.Toolbars;
 
 namespace Trinity.AspNetCore.Components.WebAssembly.AntDesignTheme
 {

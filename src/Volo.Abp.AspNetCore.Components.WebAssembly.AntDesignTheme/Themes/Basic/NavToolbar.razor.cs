@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components;
-using Volo.Abp.AspNetCore.Components.WebAssembly.Theming.Toolbars;
+using Volo.Abp.AspNetCore.Components.Web.Theming.Toolbars;
 
 namespace Trinity.AspNetCore.Components.WebAssembly.AntDesignTheme.Themes.Basic
 {
