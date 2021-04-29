@@ -1,6 +1,6 @@
 @using Volo.Abp.Ui.Branding
 @inject IBrandingProvider BrandingProvider
-<div style="height:64px; margin:16px; color:white;text-align:center;">
+<div style="height:64px; margin:16px; color:white;text-align:center;font-weight: bold">
     @if (!BrandingProvider.LogoUrl.IsNullOrWhiteSpace())
     {
         <img src="@BrandingProvider.LogoUrl" alt="@BrandingProvider.AppName">

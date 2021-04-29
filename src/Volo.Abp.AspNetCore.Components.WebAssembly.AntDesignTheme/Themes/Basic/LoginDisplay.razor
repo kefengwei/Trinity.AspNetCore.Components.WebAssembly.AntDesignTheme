@@ -8,7 +8,7 @@
 @inject SignOutSessionStateManager _signOutManager
 <AuthorizeView>
     <Authorized>
-        <Dropdown>
+        <Dropdown Placement="PlacementType.BottomRight" BoundaryAdjustMode="TriggerBoundaryAdjustMode.InView">
             <Overlay>
                 <Menu>
                     @if (Menu != null)
@@ -30,8 +30,8 @@
                     else
                     {
                         <span>@_currentUser.UserName</span>
-                    } 
-                    <Icon Type="down" />
+                    }
+                    <Icon Type="down"/>
                 </a>
             </ChildContent>
         </Dropdown>
@@ -40,6 +40,7 @@
         <a class="nav-link" href="authentication/login">Log in</a>
     </NotAuthorized>
 </AuthorizeView>
+
 @code{
 
     private async Task NavigateToAsync(string uri, string target = null)
@@ -50,6 +51,10 @@
         }
         else
         {
+            if (uri.StartsWith("~/"))
+            {
+                uri = uri.Replace("~/", "");
+            }
             _navigation.NavigateTo(uri);
         }
     }
@@ -59,4 +64,5 @@
         await _signOutManager.SetSignOutState();
         await NavigateToAsync("authentication/logout");
     }
+
 }
